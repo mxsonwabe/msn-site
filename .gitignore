@@ -1,0 +1,17 @@
+.gitignore
+
+# Hugo build output
+/public/
+/resources/_gen/
+/hugo_cache/
+/hugo_stats.json
+
+
+# Node 
+node_modules/
+package-lock.json
+yarn.lock
+
+# Go module cache
+go.sum
+
