@@ -132,7 +132,7 @@ a {
 
     .links.open {
         /* Expand to the height you specified */
-        max-height: 350px;
+        max-height: 340px;
         /* Add some padding for better spacing when open */
         padding-top: 20px;
         padding-bottom: 20px;

@@ -10,14 +10,11 @@
   justify-content: space-between;
   align-items: center;
   padding-bottom: 15px;
-  padding-top: 5px;
+  padding-top: 8px;
   border-top: 5px gold solid;
 }
 
-.footerSocial {
-  gap: 20px;
-}
-a {
+.footerSocials a {
   margin-left: 10px;
 }
 
@@ -25,6 +22,7 @@ svg {
   height: 20px;
   width: 20px;
 }
+
 svg path {
   fill: var(--textSoft);
 }
@@ -67,7 +65,7 @@ svg path {
   .footerLinks{
     font-size: 1.2rem;
   }
-  a {
+  .footerSocials a{
     margin-left: 5px;
   }
 }
@@ -83,7 +81,7 @@ svg path {
     font-size: 1.2rem;
   }
 
-  a {
+  .footerSocials a {
     margin-left: 5px;
   }
 }
