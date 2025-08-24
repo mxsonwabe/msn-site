@@ -15,7 +15,7 @@
 }
 
 .footerSocials a {
-  margin-left: 10px;
+  margin-left: 15px;
 }
 
 svg {
@@ -63,10 +63,14 @@ svg path {
     padding-left: 10px;
   }
   .footerLinks{
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
   .footerSocials a{
     margin-left: 5px;
+  }
+  svg {
+    height: 16px;
+    width: 16px;
   }
 }
 
@@ -78,10 +82,14 @@ svg path {
     padding-left: 10px;
   }
   .footerLinks{
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
 
   .footerSocials a {
     margin-left: 5px;
+  }
+  svg {
+    height: 16px;
+    width: 16px;
   }
 }

@@ -1,5 +1,35 @@
 {{ define "main" }}
+<link rel="stylesheet" type="text/css" href="/styles/list.css">
 <section class="list">
-    This is the <a href="/">home page</a>
+    This is the Posts page
+</section>
+<section>
+    {{ range .Paginator.Pages }}
+    <div class="listItem">
+        <div>
+            <img 
+                src={{ .Params.thumbnail }}
+                alt={{ .Title }}
+                loading="lazy"
+                class="listItemImage"
+            />
+            <div class="listItemText">
+                <h2>
+                    <a href={{ .Permalink }} class="listItemTitle">
+                        {{ .Title }}
+                    </a>
+                </h2>
+                <p class="listItemDescription">{{ .Params.description }}</p>
+                <div class="listItemDetail">
+                    <img src="{{ .Params.avatar }}" 
+                        loading="lazy"
+                        alt=""/>                    
+                    <span></span>
+                    <time datetime={{ .Date }}>{{ dateFormat .Site.Params.dateFormat .Date }}</time>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{ end }}
 </section>
 {{ end }}

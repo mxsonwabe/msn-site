@@ -1,13 +1,13 @@
 +++
-date = '2025-08-21T20:11:50+02:00'
+date = '2025-08-23T20:43:22+02:00'
 draft = true
-title = 'My First Post'
+title = 'My Third Post'
 description = "What is the post about?"
-thumbnail = "/images/1s.webp"
-imageCover = "/images/1b.webp"
+thumbnail = "/images/3s.webp"
+imageCover = "/images/3b.webp"
 chategories = ["general"]
 authors = ["masonwabe"]
 avatar = "/images/profile/avatar.png"
 summary = "TL;DR"
 +++
-First Time
+Duck Developing 3
