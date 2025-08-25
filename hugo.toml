@@ -8,3 +8,7 @@ image = "/images/flower.png"
 
 [params]
   dateFormat = "Jan 6, 2006"
+
+[taxonomies]
+  author = "authors"
+  catergory = "categories"

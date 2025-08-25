@@ -5,8 +5,8 @@ title = 'My Fourth Post'
 description = "What is the post about?"
 thumbnail = "/images/4s.webp"
 imageCover = "/images/4b.webp"
-chategories = ["general"]
-authors = ["masonwabe"]
+categories = ["general", "sports", "music"]
+authors = ["masonwabe", "hal"]
 avatar = "/images/profile/avatar.png" 
 summary = "TL;DR"
 +++

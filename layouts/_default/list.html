@@ -6,26 +6,37 @@
 <section>
     {{ range .Paginator.Pages }}
     <div class="listItem">
-        <div>
-            <img 
-                src={{ .Params.thumbnail }}
-                alt={{ .Title }}
-                loading="lazy"
-                class="listItemImage"
-            />
-            <div class="listItemText">
-                <h2>
-                    <a href={{ .Permalink }} class="listItemTitle">
-                        {{ .Title }}
-                    </a>
-                </h2>
-                <p class="listItemDescription">{{ .Params.description }}</p>
-                <div class="listItemDetail">
-                    <img src="{{ .Params.avatar }}" 
-                        loading="lazy"
-                        alt=""/>                    
-                    <span></span>
-                    <time datetime={{ .Date }}>{{ dateFormat .Site.Params.dateFormat .Date }}</time>
+        <img 
+            src={{ .Params.thumbnail }}
+            alt={{ .Title }}
+            loading="lazy"
+            class="listItemImage"
+        />
+        <div class="listItemText">
+            <h2>
+                <a href={{ .Permalink }} class="listItemTitle">
+                    {{ .Title }}
+                </a>
+            </h2>
+            <p class="listItemDescription">{{ .Params.description }}</p>
+            <div class="listItemDetail">
+                <img src="{{ .Params.avatar }}" 
+                    loading="lazy"
+                    alt=""/>                    
+                <span>
+                    {{ range .GetTerms "authors" }}
+                    <a class="author" href={{ .Permalink }}>
+                        {{ .Name }}
+                    </a> 
+                    {{ end }}
+                </span>
+                <time datetime={{ .Date }}>{{ dateFormat .Site.Params.dateFormat .Date }}</time>
+                <div class="listItemCategories">
+                    {{ range .GetTerms "categories" }}
+                    <a class="listItemCategory" href={{ .Permalink }}>
+                        #{{ .Name }}
+                    </a> 
+                    {{ end }}
                 </div>
             </div>
         </div>
