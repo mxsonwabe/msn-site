@@ -1,8 +1,16 @@
+{{ define "header" }}{{ partials.Include "page-header.html" . }}{{ end }}
 {{ define "main" }}
-<article class="single">
-    <section>
-        This is a single page
-    </section>
-</article>
+  <div class="single">
+    <article class="">
+      <header>
+        <h1 class="f1">
+          {{ .Title }}
+        </h1>
+      </header>
+      <div class="">
+        {{ .Content }}
+      </div>
+    <span>SPICE</span>
+    </article>
+  </div>
 {{ end }}
-

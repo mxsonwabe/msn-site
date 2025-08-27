@@ -5,6 +5,8 @@ image = "/images/flower.png"
 
 [permalinks]
   posts = "/posts/:slug/"
+  contact = "/contact/"
+  projects = "/projects/"
 
 [params]
   dateFormat = "Jan 6, 2006"

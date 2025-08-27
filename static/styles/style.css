@@ -32,7 +32,7 @@ body {
   font-size: 1.6rem; /* and now set default font-size to 16px */
   color: var(--text);
   background-color: var(--bg);
-  font-family: "Playfair Display","Roboto", "serif";
+  font-family: "Lora", "Playfair Display","Roboto", "serif";
   /* background-image: url("/images/flower-pencil.png"); */
 }
 

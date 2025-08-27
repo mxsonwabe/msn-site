@@ -23,6 +23,13 @@
   font-size: 1.3rem;
   display: flex;
   flex-direction: column;
+  gap: 10px;
+}
+
+.authorDateContainer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .listItemDetail img {
@@ -31,13 +38,22 @@
   height: 50px;
   width: 50px;
   object-fit: cover;
-  margin-bottom: 4px;
+}
+
+.authorDateInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
 }
 
 .listItemCategories {
   display: flex;
   gap: 10px;
-  font-size:1.2rem;
+  font-size: 1.25rem;
+}
+
+.debug {
+  background-color: red;
 }
 
 .listItemCategory {
@@ -46,6 +62,7 @@
   border-radius: 5px;
   color: var(--textSoft);
   background-color: var(--bgSoft);
+  /* text-shadow: 1px 1px gold; */
 }
 
 .author {

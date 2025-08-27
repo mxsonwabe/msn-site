@@ -20,21 +20,25 @@
             </h2>
             <p class="listItemDescription">{{ .Params.description }}</p>
             <div class="listItemDetail">
-                <img src="{{ .Params.avatar }}" 
-                    loading="lazy"
-                    alt=""/>                    
-                <span>
-                    {{ range .GetTerms "authors" }}
-                    <a class="author" href={{ .Permalink }}>
-                        {{ .Name }}
-                    </a> 
-                    {{ end }}
-                </span>
-                <time datetime={{ .Date }}>{{ dateFormat .Site.Params.dateFormat .Date }}</time>
+                <div class="authorDateContainer">
+                    <img src="{{ .Params.avatar }}" 
+                        loading="lazy"
+                        alt=""/>                    
+                    <div class="authorDateInfo">
+                        <span>
+                            {{ range .GetTerms "authors" }}
+                            <a class="author" href={{ .Permalink }}>
+                                {{ .Name }}
+                            </a> 
+                            {{ end }}
+                        </span>
+                        <time datetime={{ .Date }}>{{ dateFormat .Site.Params.dateFormat .Date }}</time>
+                    </div>
+                </div>
                 <div class="listItemCategories">
                     {{ range .GetTerms "categories" }}
                     <a class="listItemCategory" href={{ .Permalink }}>
-                        #{{ .Name }}
+                        <strong>#</strong>{{ .Name }}
                     </a> 
                     {{ end }}
                 </div>
