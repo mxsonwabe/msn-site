@@ -1,16 +1,67 @@
-{{ define "header" }}{{ partials.Include "page-header.html" . }}{{ end }}
 {{ define "main" }}
-  <div class="single">
-    <article class="">
-      <header>
-        <h1 class="f1">
-          {{ .Title }}
-        </h1>
-      </header>
-      <div class="">
-        {{ .Content }}
+  <link rel="stylesheet" type="text/css" href="/styles/main.css">
+  <article class="post">
+    <div class="heroContainer">
+      <div class="heroSection">
+        <div class="heroBackground" 
+          style="background-image:
+          url('{{.Params.imageCover}}');"
+          loading="lazy"
+        >
+          <div class="heroOverlay"></div>
+        </div>
+        <div class="heroContent">
+          <div class="postHeader">
+            <h1 class="postTitle">{{ .Title }}</h1>
+            <div class="postMeta">
+              <div class="authorSection">
+                <img src="{{.Params.avatar}}" alt="" loading="lazy" class="postAvatar" />
+                <div class="authorInfo">
+                  <div class="authorNames">
+                    {{range .GetTerms "authors" }}
+                    <a href="{{.Permalink}}" class="authorName">{{.Name |
+                    humanize}}</a>
+                    {{end}}
+                  </div>
+                  <time class="postDate">{{dateFormat .Site.Params.dateFormat .Date}}</time>
+                </div>
+              </div>
+              <div class="postCategories">
+                {{range .GetTerms "categories" }}
+                <a href="{{.Permalink}}" class="postCategory">{{.Name}}</a>
+                {{end}}
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-    <span>SPICE</span>
-    </article>
-  </div>
+      
+      <!-- Mobile-only content below image -->
+      <div class="mobilePostHeader">
+        <h1 class="postTitle">{{ .Title }}</h1>
+        <div class="postMeta">
+          <div class="authorSection">
+            <img src="{{.Params.avatar}}" alt="" loading="lazy" class="postAvatar" />
+            <div class="authorInfo">
+              <div class="authorNames">
+                {{range .GetTerms "authors" }}
+                <a href="{{.Permalink}}" class="authorName">{{.Name | humanize}}</a>
+                {{end}}
+              </div>
+              <time class="postDate">{{dateFormat .Site.Params.dateFormat .Date}}</time>
+            </div>
+          </div>
+          <div class="postCategories">
+            {{range .GetTerms "categories" }}
+            <a href="{{.Permalink}}" class="postCategory">{{.Name}}</a>
+            {{end}}
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="postContent">
+      {{ .Content }}
+    </div>
+  </article>
 {{ end }}
