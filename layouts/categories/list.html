@@ -1,0 +1,55 @@
+{{ define "main" }}
+<link rel="stylesheet" type="text/css" href="/styles/list.css">
+{{ if eq .RelPermalink "/categories/" }}
+    {{ range $.Site.Taxonomies.categories.ByCount }}
+        <a href="/categories/{{ .Name }}">
+        #{{.Name}} <small>({{ .Count }})</small>
+        </a>
+    {{ end }}
+{{ else }}
+    <section>
+        {{ range .Paginator.Pages }}
+        <div class="listItem">
+            <img 
+                src={{ .Params.thumbnail }}
+                alt={{ .Title }}
+                loading="lazy"
+                class="listItemImage"
+            />
+            <div class="listItemText">
+                <h2>
+                    <a href={{ .Permalink }} class="listItemTitle">
+                        {{ .Title }}
+                    </a>
+                </h2>
+                <p class="listItemDescription">{{ .Params.description }}</p>
+                <div class="listItemDetail">
+                    <div class="authorDateContainer">
+                        <img src="{{ .Params.avatar }}" 
+                            loading="lazy"
+                            alt=""/>                    
+                        <div class="authorDateInfo">
+                            <span>
+                                {{ range .GetTerms "authors" }}
+                                <a class="author" href={{ .Permalink }}>
+                                    {{ .Name }}
+                                </a> 
+                                {{ end }}
+                            </span>
+                            <time datetime={{ .Date }}>{{ dateFormat .Site.Params.dateFormat .Date }}</time>
+                        </div>
+                    </div>
+                    <div class="listItemCategories">
+                        {{ range .GetTerms "categories" }}
+                        <a class="listItemCategory" href={{ .Permalink }}>
+                            <strong>#</strong>{{ .Name }}
+                        </a> 
+                        {{ end }}
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{ end }}
+    </section>
+{{ end }}
+{{ end }}
