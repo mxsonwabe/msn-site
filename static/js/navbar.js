@@ -9,3 +9,15 @@ mobileMenuBtn.addEventListener('click', () => {
     // Toggle the 'open' class on the links to show/hide the menu
     navLinks.classList.toggle('open');
 });
+
+const mode = localStorage.getItem("mode") || ""
+const toggle = document.querySelector(".toggle")
+const body = document.querySelector("body")
+
+document.body.className = mode
+
+toggle.addEventListener("click", () => {
+    localStorage.setItem("mode", mode === "light" ? "": "light")
+    body.classList.toggle("light")
+})
+

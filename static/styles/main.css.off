@@ -1,0 +1,39 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: inherit;
+}
+
+.post {
+  position: relative;
+  background-color: red;
+  border: 10px solid red;
+  padding: 50;
+}
+
+.postCover {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 1;
+  width: 100%;
+  border: 2px solid magenta;
+  height: 500px;
+}
+
+.postHeader {
+  position: absolute; 
+  bottom: 0;
+  z-index: 2;
+  border: 2px solid green;
+}
+
+
+/* --- Responsive Styles --- */
+@media (max-width: 768px) {
+  .main{
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}

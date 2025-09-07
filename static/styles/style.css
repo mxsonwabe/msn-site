@@ -19,21 +19,18 @@ a {
   color: inherit;
 }
 
-/* .roboto { */
-/*   font-family: "Roboto", sans-serif; */
-/*   font-optical-sizing: auto; */
-/*   font-weight: 100; */
-/*   font-style: normal; */
-/*   font-variation-settings: */
-/*     "wdth" 100; */
-/* } */
-
 body {
   font-size: 1.6rem; /* and now set default font-size to 16px */
   color: var(--text);
   background-color: var(--bg);
   font-family: "Lora", "Playfair Display","Roboto", "serif";
-  /* background-image: url("/images/flower-pencil.png"); */
+}
+
+body.light {
+  --bg: #dee4eb;
+  --text: #0b1529;
+  --bgSoft: #cbd2d9;
+  --textSoft: #1f3050;
 }
 
 h1, h2, h3 {

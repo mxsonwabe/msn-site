@@ -7,9 +7,10 @@
 }
 
 .listItemImage {
-  border-radius: 10%;
-  width: 200px;
-  height: 200px;
+  margin-left: 1px;
+  border-radius: 2%;
+  width: 335px;
+  height: 250px;
   object-fit: cover;
 }
 

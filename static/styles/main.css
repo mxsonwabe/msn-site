@@ -5,10 +5,387 @@
   font-size: inherit;
 }
 
+/* .landing .bottom .info .writing a { */
+/*   text-decoration: underline; */
+/*   color: red; */
+/* } */
+
+/* LANDING START */
+.landing {
+  display: flex;
+  text-align: center;
+  flex-direction: row-reverse;
+  gap: 20px;
+  /* background-color: red; */
+  justify-content: center;
+  align-items: flex-start;
+  max-width: 85%;
+  margin: 40px auto;
+  font-size: 2rem;
+}
+
+.landing .top {
+  flex: 1;
+  width: 100%;
+  /* background-color: green; */
+}
+
+.landing .bottom {
+  flex: 1;
+  /* background-color: blue; */
+  display: flex;
+  flex-direction: column;
+  text-align: end;
+  gap: 30px;
+}
+
+.landing img {
+  height: 600px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.landing h1 {
+  text-align: start;
+}
+
+.post {
+  position: relative;
+  width: 100%;
+}
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+.skill {
+  border-radius: 6px;
+  border: 1px solid var(--textSoft);
+  padding: 5px;
+  background-color: var(--bgSoft);
+  display: flex;
+  align-items: center;
+}
+
+/* LANDING PAGE END */
+
+/* Hero Container - Controls width and centering */
+.heroContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0;
+}
+
+/* Hero Section Styles - Desktop */
+.heroSection {
+  position: relative;
+  height: 600px;
+  width: 75%;
+  max-width: 1200px;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.heroBackground {
+  position: absolute;
+  top: 35px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 1;
+  border-radius: inherit;
+}
+
+.heroOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.1) 0%,
+    rgba(0, 0, 0, 0.3) 60%,
+    rgba(31, 48, 80, 0.8) 100%
+  );
+  z-index: 2;
+  border-radius: inherit;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  padding: 40px;
+  color: white;
+}
+
+.postHeader {
+  max-width: 800px;
+}
+
+/* Mobile-only header - hidden by default */
+.mobilePostHeader {
+  display: none;
+  padding: 30px 20px;
+  color: var(--text);
+}
+
+.postTitle {
+  font-size: 4rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  line-height: 1.1;
+}
+
+.postDesc {
+  font-size: 1.8rem;
+  margin-bottom: 25px;
+  opacity: 0.95;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+  line-height: 1.4;
+}
+
+.postMeta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.authorSection {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.postAvatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 215, 0, 0.8);
+  object-fit: cover;
+}
+
+.authorInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.authorNames {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.authorName {
+  font-size: 1.6rem;
+  font-weight: 500;
+  text-decoration: none;
+  color: white;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+.authorName:hover {
+  text-decoration: underline;
+}
+
+.postDate {
+  font-size: 1.4rem;
+  opacity: 0.9;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+.postCategories {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.postCategory {
+  padding: 6px 10px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 20px;
+  font-size: 1.3rem;
+  text-decoration: none;
+  color: white;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.postCategory:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Post Content Styles */
+.postContent {
+  padding: 60px 30px;
+  max-width: 80%;
+  margin: 0 auto;
+  line-height: 1.8;
+  font-size: 1.7rem;
+}
+
+.postContent h1,
+.postContent h2,
+.postContent h3 {
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.postContent p {
+  margin-bottom: 20px;
+}
+
 /* --- Responsive Styles --- */
 @media (max-width: 768px) {
-  .main{
-    margin-left: 10px;
-    margin-right: 10px;
+  .heroContainer {
+    flex-direction: column;
+  }
+  
+  .heroSection {
+    margin: 0 auto;
+    height: 330px;
+    width: 98%;
+    border-radius: 0;
+  }
+  
+  .heroBackground {
+    border-radius: 0;
+  }
+  
+  .heroOverlay {
+    background: none; /* Remove overlay on mobile */
+    border-radius: 0;
+  }
+  
+  /* Hide desktop overlay content on mobile */
+  .heroContent {
+    display: none;
+  }
+  
+  /* Show mobile header below image */
+  .mobilePostHeader {
+    display: block;
+  }
+  
+  /* Mobile-specific styles for post header */
+  .mobilePostHeader .postTitle {
+    font-size: 3rem;
+    text-shadow: none;
+    color: var(--text);
+  }
+  
+  .mobilePostHeader .postDesc {
+    font-size: 1.6rem;
+    text-shadow: none;
+    opacity: 1;
+    color: var(--textSoft);
+  }
+  
+  .mobilePostHeader .postAvatar {
+    /* border: 2px solid var(--bgSoft); */
+    border: 2px solid rgba(255, 215, 0, 0.8);
+  }
+  
+  .mobilePostHeader .authorName {
+    color: var(--text);
+    text-shadow: none;
+  }
+  
+  .mobilePostHeader .postDate {
+    color: var(--textSoft);
+    text-shadow: none;
+    opacity: 1;
+  }
+  
+  .mobilePostHeader .postCategory {
+    background-color: var(--bgSoft);
+    border: 1px solid var(--bgSoft);
+    color: var(--textSoft);
+    text-shadow: none;
+    backdrop-filter: none;
+  }
+  
+  .mobilePostHeader .postCategory:hover {
+    background-color: var(--bgSoft);
+    border-color: var(--textSoft);
+  }
+  
+  .mobilePostHeader .postMeta {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .postContent {
+    max-width: 100%;
+    padding: 15px 20px;
+    font-size: 1.6rem;
+  }
+
+  .landing {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.6rem; 
+    text-align: center;
+  }
+  .landing .bottom {
+    text-align: center;
+  }
+  .landing .bottom h1 {
+    text-align: center;
+  }
+  .landing .top img {
+    width: 100%;
+    height: 400px;
+  }
+  .skills {
+    font-size: 1.4rem;
+    padding: 2px;
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 480px) {
+  .heroSection {
+    height: 250px;
+  }
+  
+  .mobilePostHeader .postTitle {
+    font-size: 2.5rem;
+  }
+  
+  .mobilePostHeader .postDesc {
+    font-size: 1.5rem;
+  }
+  
+  .mobilePostHeader .authorSection {
+    gap: 10px;
+  }
+  
+  .mobilePostHeader .postAvatar {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* Tablet and medium screens */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .heroSection {
+    width: 90%;
   }
 }
