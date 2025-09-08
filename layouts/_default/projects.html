@@ -1,7 +1,46 @@
 {{ define "main" }}
-  <link rel="stylesheet" type="text/css" href="/styles/main.css">
-  <div class="main projects">
-    <h1>Projects</h1>
-    {{ .Content }}
+<link rel="stylesheet" type="text/css" href="/styles/projects.css">
+<!-- <link rel="stylesheet" type="text/css" href="/styles/main.css"> -->
+
+<div class="main projects-container">
+  
+  <div class="projects-intro">
+    <h1>{{ .Title }}</h1>
+    <div class="intro-content">
+      {{ .Content }}
+    </div>
   </div>
+
+  <div class="projects-grid">
+    {{ range .Params.projects }}
+    <div class="project-card">
+      <div class="project-image-container">
+        <img src="{{ .image | default "https://placehold.co/600x400/1f3050/dee4eb?text=Project" }}" alt="Screenshot of {{ .title }}" class="project-image">
+      </div>
+      <div class="project-content">
+        <div class="project-tags">
+          {{ range .tags }}
+            <span class="project-tag">{{ . }}</span>
+          {{ end }}
+        </div>
+        <h2 class="project-title">{{ .title }}</h2>
+        <p class="project-description">{{ .description }}</p>
+      </div>
+      <div class="project-footer">
+        <div class="project-links">
+          {{ if .github }}
+          <a href="{{ .github }}" target="_blank" rel="noopener noreferrer" aria-label="GitHub Repository for {{ .title }}">
+            <!-- GitHub Icon SVG -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+          </a>
+          {{ end }}
+        </div>
+        {{ if .demo }}
+        <a href="{{ .demo }}" class="project-demo-button" target="_blank" rel="noopener noreferrer">{{ .button_text | default "Demo" }}</a>
+        {{ end }}
+      </div>
+    </div>
+    {{ end }}
+  </div>
+</div>
 {{ end }}

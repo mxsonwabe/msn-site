@@ -15,7 +15,7 @@
   display: flex;
   text-align: center;
   flex-direction: row-reverse;
-  gap: 20px;
+  gap: 90px;
   /* background-color: red; */
   justify-content: center;
   align-items: flex-start;
@@ -59,6 +59,8 @@
   gap: 10px;
   justify-content: center;
   align-items: center;
+  font-family: "Pirata One";
+  text-align: center;
 }
 .skill {
   border-radius: 6px;
@@ -67,6 +69,7 @@
   background-color: var(--bgSoft);
   display: flex;
   align-items: center;
+  gap: 5px;
 }
 
 /* LANDING PAGE END */
@@ -252,14 +255,29 @@
 }
 
 /* --- Responsive Styles --- */
+@media (max-width: 811px) {
+  .landing {
+    gap: 15px;
+    margin-top: 0;
+  }
+}
+
 @media (max-width: 768px) {
+  .landing {
+    margin-top: 40px;
+  }
+
+  .info {
+    text-align: start;
+  }
+
   .heroContainer {
     flex-direction: column;
   }
   
   .heroSection {
-    margin: 0 auto;
-    height: 330px;
+    margin: 0px auto;
+    height: 350px;
     width: 98%;
     border-radius: 0;
   }
@@ -342,7 +360,9 @@
     flex-direction: column;
     font-size: 1.6rem; 
     text-align: center;
+    gap: 10px;
   }
+
   .landing .bottom {
     text-align: center;
   }
@@ -357,6 +377,7 @@
     font-size: 1.4rem;
     padding: 2px;
     justify-content: flex-start;
+    text-align: center;
   }
 }
 
