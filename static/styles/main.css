@@ -74,6 +74,13 @@
 
 /* LANDING PAGE END */
 
+/* CONTACT PAGE START */
+.contact {
+  text-align: center;
+}
+
+/* CONTACT PAGE END */
+
 /* Hero Container - Controls width and centering */
 .heroContainer {
   width: 100%;

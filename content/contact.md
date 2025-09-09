@@ -4,7 +4,10 @@ draft = true
 title = 'Contact'
 layout = "contact"
 +++
-Want to talk to me about anything? Feel free to reach out!
+# Get in Touch
+My inbox is always open. Whether you have a question or just want to say hi
+
+I’ll do my best to get back to you!
 - Email: nkombisa.masonwabe@gmail.com
 - X (The eveything plaftorm): msnctl
 
