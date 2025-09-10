@@ -4,6 +4,7 @@
 .projects-container {
     width: 100%;
     padding: 40px 0;
+    margin: 0px 90px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -149,6 +150,12 @@
 }
 
 /* --- Responsive Styles --- */
+@media (max-width: 811px) {
+  .projects-container {
+    margin: 0px 0px;
+  }
+}
+
 @media (max-width: 768px) {
     .projects-grid {
         /* On smaller screens, stack the cards in a single column */

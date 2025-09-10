@@ -53,6 +53,7 @@
   position: relative;
   width: 100%;
 }
+
 .skills {
   display: flex;
   flex-wrap: wrap;
@@ -62,6 +63,7 @@
   font-family: "Pirata One";
   text-align: center;
 }
+
 .skill {
   border-radius: 6px;
   border: 1px solid var(--textSoft);
@@ -70,6 +72,15 @@
   display: flex;
   align-items: center;
   gap: 5px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.skill:hover {
+  /* Scale it up by 5% and move it up by 5px */
+  transform: scale(1.05) translateY(-2px);
+  /* Optional: Add a subtle shadow for more depth */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* LANDING PAGE END */
@@ -77,6 +88,25 @@
 /* CONTACT PAGE START */
 .contact {
   text-align: center;
+}
+
+.email-button {
+  display: inline-block;
+  padding: 12px 24px;
+  margin-top: 20px;
+  background-color: var(--bgSoft); /* A nice blue, change as you like */
+  color: var(--textSoft);
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  text-align: center;
+  transition: background-color 0.2s ease, transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.email-button:hover {
+  border: 1px solid gold;
+  transform: scale(1.02) translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* CONTACT PAGE END */
