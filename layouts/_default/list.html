@@ -1,8 +1,15 @@
 {{ define "main" }}
 <link rel="stylesheet" type="text/css" href="/styles/list.css">
+{{ $publishedPosts := where .Paginator.Pages "Params.draft" "!=" true }}
+{{ if eq (len $publishedPosts) 0 }}
+<div class="noWriting">
+    <h1 class="">Writing</h1>
+    <span>Coming Soon...</span>
+</div>
+{{ else }}
 <section class="listWritings">
-    <h1>Writing</h1>
-    {{ range .Paginator.Pages }}
+    <h1 class="">Writing</h1>
+    {{ range $publishedPosts }}
     <div class="listItem">
         <img 
             src={{ .Params.thumbnail }}
@@ -45,4 +52,5 @@
     </div>
     {{ end }}
 </section>
+{{ end }}
 {{ end }}

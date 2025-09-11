@@ -1,3 +1,11 @@
+.listHeading {
+  position: relative;
+  left: 90px;
+}
+.noWriting {
+  position: relative;
+  text-align: center;
+}
 .listWritings {
   margin: 30px 90px;
 }

@@ -15,7 +15,7 @@
     {{ range .Params.projects }}
     <div class="project-card">
       <div class="project-image-container">
-        <img src="{{ .image | default "https://placehold.co/600x400/1f3050/dee4eb?text=Project" }}" alt="Screenshot of {{ .title }}" class="project-image">
+        <img src="{{ .image }}" alt="Screenshot of {{ .title }}" class="project-image">
       </div>
       <div class="project-content">
         <div class="project-tags">
