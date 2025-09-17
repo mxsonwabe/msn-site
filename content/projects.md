@@ -6,31 +6,58 @@ draft = false
 # The format below is a TOML array of tables.
 
 [[projects]]
-title = "Hugo Profile"
-description = "A highly customizable and mobile first Hugo template for personal portfolio and blog."
-image = "https://www.google.com/search?q=https://i.imgur.com/VA41J45.png"
-tags = ["Hugo", "Bootstrap", "Javascript"]
-github = "https://github.com/gurusabarish/hugo-profile"
-demo = "https://hugo-profile.netlify.app/"
-button_text = "Demo"
+title = "Java Web App"
+description = "A Java multipage hypermedia application server."
+image = "/images/projects/java_web_project.webp"
+tags = ["Java", "Thymeleaf", "Springboot", "Bootstrap"]
+github = "https://gitlab.com/masonwabe/people-db/-/tree/app?ref_type=heads"
+demo = "https://gitlab.com/masonwabe/people-db/-/tree/app?ref_type=heads"
+button_text = "Repo"
 
 [[projects]]
-title = "Image Converter"
-description = "A web app to convert image to pdf, png to jpg, and png to webp without a database using Django."
-image = "https://www.google.com/search?q=https://i.imgur.com/1t3qEwE.png"
-tags = ["Django", "Bootstrap"]
-github = "https://github.com/"
+title = "AI Agent"
+description = "A Python code agent that can execute tasks from your CLI"
+image = "/images/projects/agenticai.webp"
+tags = ["Python", "GenAI"]
+github = "https://github.com/mxsonwabe/agenticai"
 demo = "#"
-button_text = "Demo"
+button_text = "Repo"
 
 [[projects]]
-title = "Hugo Profile V2"
-description = "A clean and simple Hugo template for personal portfolio and blog. This is another great project."
-image = "https://www.google.com/search?q=https://i.imgur.com/w1zNxk3.png"
-tags = ["Hugo", "Javascript"]
-github = "https://www.google.com/search?q=https://github.com/gurusabarish/hugo-profile-v2"
-demo = "https://www.google.com/search?q=https://hugo-profile-v2.netlify.app/"
-button_text = "Demo V2"
+title = "Go-web App"
+description = "A minimalist stack web app, built to optimize for a fast development cycle."
+image = "/images/projects/go_web_app.webp"
+tags = ["Golang", "HTMX", "Bootstrap"]
+github = "https://github.com/mxsonwab/hyprwrld"
+demo = "#"
+button_text = "Repo"
+
+[[projects]]
+title = "STM-32 Communication Protocol"
+description = "A project to develop a way for two stm32-microcontrollers to be able to \"talk\" to each other"
+image = "/images/projects/STM32F0DISCOVERY.webp"
+tags = ["C", "STM-32"]
+github = "https://github.com/karanimaan/3096-Pracs-ABRKAR004"
+demo = "#"
+button_text = "Repo"
+
+[[projects]]
+title = "Java JSON API"
+description = "This is a Spring Boot application that provides a JSON API for a fitness application to track your runs"
+image = "/images/projects/java_json_api.webp"
+tags = ["Java", "Springboot", "curl"]
+github = "https://github.com/mxsonwabe/trackstars"
+demo = "#"
+button_text = "Repo"
+
+# [[projects]]
+# title = "TCP Chat App"
+# description = "A TCP chat CLI app build with Python"
+# image = "/images/projects/"
+# tags = ["Python", "Networking", "Socket-Programming"]
+# github = "https://github.com/mxsonwabe/tcp_chat"
+# demo = "#"
+# button_text = "Repo"
 +++
 I am a versatile developer creating robust web applications,
 intelligent CLI tools, and innovative IoT solutions.

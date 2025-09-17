@@ -8,6 +8,3 @@ layout = "contact"
 My inbox is always open. Whether you have a question or just want to say hi
 
 I’ll do my best to get back to you!
-- Email: nkombisa.masonwabe@gmail.com
-- X (The eveything plaftorm): msnctl
-
