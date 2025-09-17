@@ -13,7 +13,9 @@ title = 'MSN'
   skills = ["java", "spring", "javascript", "python","sql", "golang", "c", "IoT"] 
   description = "Masonwabe Shaun Nkombisa's Personal Site"
 
-
 [taxonomies]
   author = "authors"
   catergory = "categories"
+
+[pagination]
+  pagerSize = 4
