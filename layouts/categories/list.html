@@ -1,10 +1,14 @@
 {{ define "main" }}
 <link rel="stylesheet" type="text/css" href="/styles/list.css">
 {{ if eq .RelPermalink "/categories/" }}
-    {{ range $.Site.Taxonomies.categories.ByCount }}
-        <a href="/categories/{{ .Name }}">
-        #{{.Name}} <small>({{ .Count }})</small>
-        </a>
+    {{ if $.Site.Taxonomies.categories }}
+        {{ range $.Site.Taxonomies.categories.ByCount }}
+            <a href="/categories/{{ .Name }}">
+            #{{.Name}} <small>({{ .Count }})</small>
+            </a>
+        {{ end }}
+    {{ else }}
+        <p>No categories have been created yet :)</p>
     {{ end }}
 {{ else }}
     <section>

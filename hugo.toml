@@ -1,7 +1,6 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://maso.qzz.io'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
-image = "/images/flower.png"
+title = 'MSN'
 
 [permalinks]
   posts = "/posts/:slug/"
@@ -9,7 +8,11 @@ image = "/images/flower.png"
   projects = "/projects/"
 
 [params]
+  image = "/images/profile/main-img.webp"
   dateFormat = "Jan 6, 2006"
+  skills = ["java", "spring", "javascript", "python","sql", "golang", "c", "IoT"] 
+  description = "Masonwabe Shaun Nkombisa's Personal Site"
+
 
 [taxonomies]
   author = "authors"
