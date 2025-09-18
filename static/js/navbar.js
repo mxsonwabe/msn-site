@@ -37,7 +37,7 @@ navbar.addEventListener('click', (event) => {
     // except for navigation purposes
 
     event.stopPropagation();
-    if (event.target.tagName === 'A') {
+    if (event.target.tagName === 'A' || event.target.tagName === 'svg') {
         closeMobileMenu();
     }
 })
