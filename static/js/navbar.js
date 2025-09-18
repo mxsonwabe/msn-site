@@ -45,10 +45,12 @@ navbar.addEventListener('click', (event) => {
 document.addEventListener('click', (event) => {
     // close menu for clicks outside the navbar
     const isMenuOpen = navLinks.classList.contains("open");
-    
-    const clickedInsideNavbar = navbar.contains(event.target);
-    if (!clickedInsideNavbar) {
-        closeMobileMenu();
+    if (isMenuOpen) {
+        // prevent meni from closing when not open
+        const clickedInsideNavbar = navbar.contains(event.target);
+        if (!clickedInsideNavbar) {
+            closeMobileMenu();
+        }
     }
 })
 
