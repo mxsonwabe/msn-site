@@ -1,15 +1,60 @@
 // Select the mobile menu button and the navigation links container
 const mobileMenuBtn = document.querySelector('.mobileMenu');
 const navLinks = document.querySelector('.links');
+const navbar = document.querySelector('.navbar'); // Reference to the entire navbar
+
+// Handle toggling mobile menu
 
 // Add a click event listener to the menu button
-mobileMenuBtn.addEventListener('click', () => {
-    // Toggle the 'active' class on the button for the icon animation
-    mobileMenuBtn.classList.toggle('active');
-    // Toggle the 'open' class on the links to show/hide the menu
-    navLinks.classList.toggle('open');
+mobileMenuBtn.addEventListener('click', (event) => {
+    // prevent a menuBtn click triggering a document click
+    event.stopPropagation();
+    toggleMobileMenu();
 });
 
+function toggleMobileMenu() {
+    const isOpen = navLinks.classList.contains("open")
+
+    if (isOpen) {
+        closeMobileMenu();
+    } else {
+        openMobileMenu();
+    }
+}
+
+function openMobileMenu() {
+    mobileMenuBtn.classList.add("active")
+    navLinks.classList.add("open")
+}
+
+function closeMobileMenu() {
+    mobileMenuBtn.classList.remove("active");
+    navLinks.classList.remove("open");
+}
+
+navbar.addEventListener('click', (event) => {
+    // prevent click within the navbar from closing the navbar
+    event.stopPropagation();
+})
+
+navLinks.addEventListener('click', (event) => {
+    // close meni when navigating to a new page
+    if (event.target.tagName === 'A') {
+        closeMobileMenu();
+    }
+})
+
+document.addEventListener('click', (event) => {
+    // close menu for clicks outside the navbar
+    const isMenuOpen = navLinks.classList.contains("open");
+    
+    const clickedInsideNavbar = navbar.contains(event.target);
+    if (!clickedInsideNavbar) {
+        closeMobileMenu();
+    }
+})
+
+// Handle toggling light mode
 const mode = localStorage.getItem("mode") || ""
 const toggle = document.querySelector(".toggle")
 const body = document.querySelector("body")
