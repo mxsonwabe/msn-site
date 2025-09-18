@@ -34,11 +34,9 @@ function closeMobileMenu() {
 
 navbar.addEventListener('click', (event) => {
     // prevent click within the navbar from closing the navbar
-    event.stopPropagation();
-})
+    // except for navigation purposes
 
-navLinks.addEventListener('click', (event) => {
-    // close meni when navigating to a new page
+    event.stopPropagation();
     if (event.target.tagName === 'A') {
         closeMobileMenu();
     }
