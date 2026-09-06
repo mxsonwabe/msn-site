@@ -50,7 +50,7 @@
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    border: 1px solid #2a3b5a;
+    border: 1px solid var(--border);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -64,7 +64,7 @@
     width: 100%;
     height: 220px;
     overflow: hidden;
-    background-color: #0b1529; /* Fallback color while image loads */
+    background-color: var(--bg); /* Fallback color while image loads */
 }
 
 .project-image {
@@ -120,7 +120,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 15px 20px;
-    border-top: 1px solid #2a3b5a;
+    border-top: 1px solid var(--border);
 }
 
 .project-links a {
@@ -129,24 +129,24 @@
 }
 
 .project-links a:hover {
-    color: #fff; /* A brighter color on hover */
+    color: var(--text);
 }
 
 .project-demo-button {
-    background-color: #334155;
+    background-color: var(--bgSoft);
     color: var(--text);
     padding: 5px 15px;
     border-radius: 6px;
     text-decoration: none;
     font-weight: 500;
     font-size: 1.5rem;
-    border: 1px solid #475569;
+    border: 1px solid var(--border);
     transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
 .project-demo-button:hover {
-    background-color: #475569;
-    border-color: #64748b;
+    background-color: var(--bg);
+    border-color: var(--gold);
 }
 
 /* --- Responsive Styles --- */

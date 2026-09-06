@@ -1,10 +1,12 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap'); */
 
 :root {
-  --bg: #0b1529;
-  --bgSoft: #1f3050;
-  --text: #dee4eb;
-  --textSoft: #cbd2d9;
+  --bg: #faf7f0;
+  --bgSoft: #e8eef6;
+  --text: #3a3d4d;
+  --textSoft: #5f6675;
+  --gold: #d9a441;
+  --border: #cfd8e6;
 }
 * {
   margin: 0px;
@@ -26,11 +28,13 @@ body {
   font-family: "Lora", "Playfair Display","Roboto", "serif";
 }
 
-body.light {
-  --bg: #dee4eb;
-  --text: #0b1529;
-  --bgSoft: #cbd2d9;
-  --textSoft: #1f3050;
+body.dark {
+  --bg: #0b1529;
+  --bgSoft: #1f3050;
+  --text: #dee4eb;
+  --textSoft: #cbd2d9;
+  --gold: #ffd700;
+  --border: #2a3b5a;
 }
 
 h1, h2, h3 {

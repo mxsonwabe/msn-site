@@ -1,4 +1,4 @@
-baseURL = 'https://mxso.netlify.app'
+baseURL = 'https://masonwabe.netlify.app'
 languageCode = 'en-us'
 title = 'MSN'
 
@@ -10,8 +10,8 @@ title = 'MSN'
 [params]
   image = "/images/profile/main-img.webp"
   dateFormat = "Jan 6, 2006"
-  skills = ["java", "spring", "javascript", "python","sql", "golang", "c", "IoT"] 
-  description = "Masonwabe Shaun Nkombisa's Personal Site"
+  skills = ["java", "c#", "python", "c", "javascript", "sql", "go", "spring", "linux", "git"]
+  description = "Masonwabe Shaun Nkombisa — Software developer and Computer Engineering graduate experienced in VR application development, full-stack development, embedded systems, and AI tooling."
 
 [taxonomies]
   author = "authors"

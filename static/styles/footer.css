@@ -1,17 +1,10 @@
-:root {
-  --bg: #0b1529;
-  --bgSoft: #1f3050;
-  --text: #dee4eb;
-  --textSoft: #cbd2d9;
-}
-
 .footer{
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding-bottom: 25px;
   padding-top: 15px;
-  border-top: 5px gold solid;
+  border-top: 5px var(--gold) solid;
 }
 
 .footerSocials a {

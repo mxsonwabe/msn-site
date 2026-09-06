@@ -46,7 +46,7 @@
 }
 
 .listItemDetail img {
-  border: 2px solid gold;
+  border: 2px solid var(--gold);
   border-radius: 50%;
   height: 50px;
   width: 50px;
@@ -93,7 +93,7 @@
 }
 
 .page-item {
-  border: 1px solid gray;
+  border: 1px solid var(--border);
   width: 25px;
   height: 30px;
   display: flex;
@@ -108,7 +108,7 @@
 }
 
 .page-item.disabled {
-  background-color: rgba(49, 56, 69, 0.4); 
+  background-color: var(--bgSoft); 
   cursor: not-allowed;
 }
 

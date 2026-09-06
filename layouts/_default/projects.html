@@ -12,11 +12,13 @@
   </div>
 
   <div class="projects-grid">
-    {{ range .Params.projects }}
+    {{ range $project := .Params.projects }}
     <div class="project-card">
+      {{ with $project.image }}
       <div class="project-image-container">
-        <img src="{{ .image }}" alt="Screenshot of {{ .title }}" class="project-image">
+        <img src="{{ . }}" alt="Screenshot of {{ $project.title }}" class="project-image">
       </div>
+      {{ end }}
       <div class="project-content">
         <div class="project-tags">
           {{ range .tags }}
