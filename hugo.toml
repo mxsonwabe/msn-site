@@ -8,7 +8,7 @@ title = 'MSN'
   projects = "/projects/"
 
 [params]
-  image = "/images/profile/main-img.webp"
+  image = "/images/profile/profile.webp"
   dateFormat = "Jan 6, 2006"
   skills = ["java", "c#", "python", "c", "javascript", "sql", "go", "spring", "linux", "git"]
   description = "Masonwabe Shaun Nkombisa — Software developer and Computer Engineering graduate experienced in VR application development, full-stack development, embedded systems, and AI tooling."
