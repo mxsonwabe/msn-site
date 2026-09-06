@@ -54,15 +54,15 @@ document.addEventListener('click', (event) => {
     }
 })
 
-// Handle toggling light mode
+// Handle toggling dark mode
 const mode = localStorage.getItem("mode") || ""
 const toggle = document.querySelector(".toggle")
 const body = document.querySelector("body")
 
-document.body.className = mode
+document.body.className = mode === "dark" ? "dark" : ""
 
 toggle.addEventListener("click", () => {
-    localStorage.setItem("mode", mode === "light" ? "": "light")
-    body.classList.toggle("light")
+    const isDark = body.classList.toggle("dark")
+    localStorage.setItem("mode", isDark ? "dark" : "")
 })
 
